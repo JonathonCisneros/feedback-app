@@ -10,7 +10,7 @@ function FeedbackForm ( ) {
    const [ btnDisabled, setBtnDisabled ] = useState(true);
    const [ message, setMessage ] = useState(' ');
 
-   const { addFeedback, feedbackEdit, updateFeedback } = useContext( FeedbackContext );
+	const { addFeedback, feedbackEdit, updateFeedback } = useContext( FeedbackContext );
 
    useEffect( ( ) => {
       if ( feedbackEdit.edit === true ) {
@@ -44,16 +44,18 @@ function FeedbackForm ( ) {
          }
 
          if ( feedbackEdit.edit === true ) {
+            window.scrollTo( {
+               top: 0,
+               behavior: "smooth",
+            } );
             updateFeedback( feedbackEdit.item.id, newFeedback );
-            // setBtnDisabled(true); // resets send button
             feedbackEdit.edit = false; // resets edit mode to false
          } else {
             addFeedback( newFeedback );
-            // setBtnDisabled(true); // resets send button
          }
 
          setText(' ');
-         setBtnDisabled(true); // resets send button
+         setBtnDisabled(true);  // resets send button
       }
    }
 
@@ -61,7 +63,7 @@ function FeedbackForm ( ) {
       <Card>
          <form onSubmit={ handleSubmit }>
             <h2>How would you rate your service with us?</h2>
-            <RatingSelect select={ ( rating ) => setRating(rating) }/>
+            <RatingSelect select={ ( rating ) => setRating( rating ) }/>
             <div className="input-group">
                <input
                   onChange={ handleTextChange }

@@ -8,13 +8,19 @@ This app uses React on the front end and utilizes useContext for managing state 
 
 ## Usage
 
-### Install dependencies:
+Check out Feedback App on [Netlify](https://jonathons-feedback-app.netlify.app/) (Does not use JSON-Server database)
+
+#### OR
+
+Download the project and follow steps below.
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Run:
+Run:
 
 ```bash
 npm run dev

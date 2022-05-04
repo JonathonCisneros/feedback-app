@@ -5,12 +5,13 @@ import FeedbackList from './components/FeedbackList';
 import FeedbackStats from './components/FeedbackStats';
 import AboutIconLink from './components/AboutIconLink';
 import AboutPage from './pages/AboutPage';
-import { FeedbackProvider } from './context/FeedbackContext'; // '{ }' since FeedbackProvider is not a default export
+import { FeedbackProvider } from './context/FeedbackContext'; // use '{ }' since FeedbackProvider is not a default export
 
 
 function App ( ) {
   return (
-    <FeedbackProvider>
+    // use FeedbackProvider to allow for use of useContext
+    <FeedbackProvider> 
       <Router>
         <Header />
         <div className="container">
