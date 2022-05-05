@@ -1,23 +1,23 @@
 {
   "feedback": [
     {
-      "text": "I would recommend this service to my friends!!",
-      "rating": 10,
+      "text": "I would recommend this service to my friends!",
+      "rating": 8,
       "id": 1
     },
     {
       "text": "Service was okay, better elsewhere",
-      "rating": 6,
+      "rating": 7,
       "id": 3
     },
     {
       "text": "John really helped me with my issue today!",
-      "rating": 10,
+      "rating": 9,
       "id": 6
     },
     {
       "text": " Service could use a bit more work...",
-      "rating": 5,
+      "rating": 6,
       "id": 7
     },
     {

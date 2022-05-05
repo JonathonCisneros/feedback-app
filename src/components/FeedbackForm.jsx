@@ -6,7 +6,7 @@ import FeedbackContext from '../context/FeedbackContext';
 
 function FeedbackForm ( ) {
    const [ text, setText ] = useState(' ');
-   const [ rating, setRating ] = useState(10);
+   const [ rating, setRating ] = useState( 10 );
    const [ btnDisabled, setBtnDisabled ] = useState(true);
    const [ message, setMessage ] = useState(' ');
 
@@ -24,9 +24,9 @@ function FeedbackForm ( ) {
       if ( text === '' ) {
          setBtnDisabled(true);
          setMessage(null);
-      } else if ( text !== '' && text.trim().length <= 10 ) {
+      } else if ( text !== '' && text.trim().length <= 10  ) {
          setBtnDisabled(true);
-         setMessage('Text must be at least 10 characters.')
+         setMessage( 'Text must be at least 10 characters.' );
       } else {
          setBtnDisabled(false);
          setMessage(null);
@@ -44,10 +44,6 @@ function FeedbackForm ( ) {
          }
 
          if ( feedbackEdit.edit === true ) {
-            window.scrollTo( {
-               top: 0,
-               behavior: "smooth",
-            } );
             updateFeedback( feedbackEdit.item.id, newFeedback );
             feedbackEdit.edit = false; // resets edit mode to false
          } else {
